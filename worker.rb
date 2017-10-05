@@ -23,7 +23,10 @@ class OurWorker
       sleep 2
       puts 'hard'
     else
-      sleep 1
+      while true do
+        sleep 1
+        puts 'zonbi bug'
+      end
       puts 'not hard'
     end
   end
