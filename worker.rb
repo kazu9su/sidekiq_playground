@@ -11,11 +11,13 @@ end
 
 class OurWorker
   include Sidekiq::Worker
+  sidekiq_options retry: 0
 
   def perform(complexity)
     case complexity
     when "super_hard"
-      sleep 3
+      puts 'changing a credit card'
+      raise 'hogeeee'
       puts 'Super hard'
     when 'hard'
       sleep 2
